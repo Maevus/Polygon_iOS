@@ -12,6 +12,8 @@
 		F376F44D2224816600617202 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F376F44B2224816600617202 /* Main.storyboard */; };
 		F376F44F2224816800617202 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F376F44E2224816800617202 /* Assets.xcassets */; };
 		F376F4522224816800617202 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F376F4502224816800617202 /* LaunchScreen.storyboard */; };
+		F376F45A2224846700617202 /* PolygonShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = F376F4592224846700617202 /* PolygonShape.swift */; };
+		F376F45C22248B9300617202 /* PolygonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F376F45B22248B9300617202 /* PolygonView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		F376F44E2224816800617202 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F376F4512224816800617202 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F376F4532224816800617202 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F376F4592224846700617202 /* PolygonShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolygonShape.swift; sourceTree = "<group>"; };
+		F376F45B22248B9300617202 /* PolygonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolygonView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +59,9 @@
 			isa = PBXGroup;
 			children = (
 				F376F4472224816600617202 /* AppDelegate.swift */,
+				F376F4592224846700617202 /* PolygonShape.swift */,
 				F376F4492224816600617202 /* ViewController.swift */,
+				F376F45B22248B9300617202 /* PolygonView.swift */,
 				F376F44B2224816600617202 /* Main.storyboard */,
 				F376F44E2224816800617202 /* Assets.xcassets */,
 				F376F4502224816800617202 /* LaunchScreen.storyboard */,
@@ -137,6 +143,8 @@
 			files = (
 				F376F44A2224816600617202 /* ViewController.swift in Sources */,
 				F376F4482224816600617202 /* AppDelegate.swift in Sources */,
+				F376F45A2224846700617202 /* PolygonShape.swift in Sources */,
+				F376F45C22248B9300617202 /* PolygonView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

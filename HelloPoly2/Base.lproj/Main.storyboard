@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,96 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="HelloPoly2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="center" axis="vertical" alignment="center" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="vkK-JY-oV7">
+                                <rect key="frame" x="16" y="20" width="288" height="83.5"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="left" distribution="equalSpacing" alignment="center" spacing="31" translatesAutoresizingMaskIntoConstraints="NO" id="3yp-C7-LiE">
+                                        <rect key="frame" x="62" y="8" width="164" height="20.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No. of sides" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HFB-Zi-npB">
+                                                <rect key="frame" x="0.0" y="0.0" width="91" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yqw-S9-YgM">
+                                                <rect key="frame" x="122" y="0.0" width="42" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="center" alignment="center" spacing="129" translatesAutoresizingMaskIntoConstraints="NO" id="zhU-Nl-iPe">
+                                        <rect key="frame" x="17.5" y="45.5" width="253" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wk2-FB-TIh">
+                                                <rect key="frame" x="0.0" y="0.0" width="65" height="30"/>
+                                                <state key="normal" title="Decrease"/>
+                                                <connections>
+                                                    <action selector="decreaseSides" destination="BYZ-38-t0r" eventType="touchUpInside" id="USv-nc-zJc"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gtb-E7-hWy">
+                                                <rect key="frame" x="194" y="0.0" width="59" height="30"/>
+                                                <state key="normal" title="Increase"/>
+                                                <connections>
+                                                    <action selector="increaseSides" destination="BYZ-38-t0r" eventType="touchUpInside" id="1ZT-Mu-vm8"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+                                <viewLayoutGuide key="safeArea" id="5wn-g5-tWq"/>
+                            </stackView>
+                            <view contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="XvO-cy-gqR" customClass="PolygonView" customModule="HelloPoly2" customModuleProvider="target">
+                                <rect key="frame" x="16" y="136.5" width="288" height="431.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="yia-wC-L0X" appends="YES" id="IhZ-gk-8Km"/>
+                                    <outletCollection property="gestureRecognizers" destination="DLu-Fj-mIi" appends="YES" id="TTf-6z-U0u"/>
+                                </connections>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="XvO-cy-gqR" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="4c3-9a-0ZP"/>
+                            <constraint firstItem="XvO-cy-gqR" firstAttribute="leading" secondItem="vkK-JY-oV7" secondAttribute="leading" id="7xG-tl-exo"/>
+                            <constraint firstItem="vkK-JY-oV7" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="HqF-bx-MLe"/>
+                            <constraint firstItem="XvO-cy-gqR" firstAttribute="top" secondItem="vkK-JY-oV7" secondAttribute="bottom" constant="33" id="Jnq-rW-b3q"/>
+                            <constraint firstItem="XvO-cy-gqR" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="K4K-AG-n2Z"/>
+                            <constraint firstItem="vkK-JY-oV7" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="ULv-IU-P7U"/>
+                            <constraint firstItem="vkK-JY-oV7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="pDQ-h8-lWY"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="decreaseButton" destination="Wk2-FB-TIh" id="g8y-a9-eW0"/>
+                        <outlet property="increaseButton" destination="gtb-E7-hWy" id="BK7-Rz-7Xk"/>
+                        <outlet property="polygonView" destination="XvO-cy-gqR" id="UvC-6b-KbI"/>
+                        <outlet property="vertexCountLabel" destination="yqw-S9-YgM" id="SEI-m1-5ad"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="left" id="yia-wC-L0X">
+                    <connections>
+                        <action selector="swipe:" destination="BYZ-38-t0r" id="uJv-Ge-FhT"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="DLu-Fj-mIi">
+                    <connections>
+                        <action selector="swipe:" destination="BYZ-38-t0r" id="Z4l-RW-u2b"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
+            <point key="canvasLocation" x="-143" y="-42"/>
         </scene>
     </scenes>
 </document>
